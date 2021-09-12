@@ -1,0 +1,11 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+    <h1>メンタリゼーショニストGoDaigoが占う今日の運勢</h1>
+
+    <form action="{% url 'result' %}" method="GET" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">占ってみる</button>
+    </form>
+
+{% endblock %}  

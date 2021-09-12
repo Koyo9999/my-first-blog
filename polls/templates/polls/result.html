@@ -1,0 +1,9 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+    <h1>{{age}}歳{{sign}}のあなた</h1>
+    {% autoescape off %}
+    {{fate}}
+    {% endautoescape %}
+    <div><a href="{% url 'index' %}">トップページに戻る</a></div>
+{% endblock %}
